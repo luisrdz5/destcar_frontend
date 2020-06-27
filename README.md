@@ -48,7 +48,6 @@ A continuación, se presentan las caracteristicas visuales de la app.
 
 
 ## Desarrolladores
-* [David Flores Mauricio](https://github.com/solid94)
 * [Luis Antonio Rodríguez García](https://github.com/luisrdz5)
 
 ### Contribuir
