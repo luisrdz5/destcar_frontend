@@ -71,11 +71,16 @@ export const loginUser = ({ email, password, rememberMe }, redirectUrl) => {
       },
     })
       .then(({ data }) => {
+        document.cookie = `token=${data.token}`;
         document.cookie = `email=${data.email}`;
         document.cookie = `name=${data.name}`;
         document.cookie = `id=${data.id}`;
-        document.cookie = `token=${data.token}`;
-        dispatch(loginRequest(data));
+        const user = {
+          email: data.email,
+          name: data.name,
+          id: data.id,
+        };
+        dispatch(loginRequest(user));
       })
       .then(() => {
         window.location.href = redirectUrl;

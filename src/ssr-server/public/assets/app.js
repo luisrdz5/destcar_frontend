@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "aa6f53b072288ce93947";
+/******/ 	var hotCurrentHash = "9652b2e908a4279a883a";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1053,10 +1053,16 @@ var loginUser = function loginUser(_ref2, redirectUrl) {
       }
     }).then(function (_ref3) {
       var data = _ref3.data;
+      document.cookie = "token=".concat(data.token);
       document.cookie = "email=".concat(data.email);
       document.cookie = "name=".concat(data.name);
       document.cookie = "id=".concat(data.id);
-      dispatch(loginRequest(data));
+      var user = {
+        email: data.email,
+        name: data.name,
+        id: data.id
+      };
+      dispatch(loginRequest(user));
     }).then(function () {
       window.location.href = redirectUrl;
     })["catch"](function (err) {

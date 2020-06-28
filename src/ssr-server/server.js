@@ -79,11 +79,19 @@ app.post('/auth/sign-in', async (req, res, next) => {
           next(error);
         }
         const { token, ...user } = data;
+        /*
         res.cookie('token', token, {
           httpOnly: !config.dev,
           secure: !config.dev,
         });
-        res.status(200).json(user.user);
+        */
+        const tokenUser = {
+          email: user.user.email,
+          name: user.user.name,
+          id: user.user.id,
+          token,
+        };
+        res.status(200).json(tokenUser);
       });
     } catch (error) {
       next(error);
@@ -93,7 +101,7 @@ app.post('/auth/sign-in', async (req, res, next) => {
 
 app.post('/auth/sign-up', async (req, res, next) => {
   const { body: user } = req;
-  const userData = {...user, apiKeyToken: config.apiKeyToken }
+  const userData = { ...user, apiKeyToken: config.apiKeyToken };
   try {
     const dataResponse = await axios({
       url: `${config.apiUrl}/api/auth/sign-up`,
@@ -116,7 +124,7 @@ app.post('/getTrip', async (req, res, next) => {
       method: 'get',
       data: {
         origin,
-        destination
+        destination,
       },
     });
 
@@ -166,7 +174,7 @@ app.get(
     console.log(`aqui viene la respuesta:  ${token}`);
     res.cookie('token', token, {
       httpOnly: !config.dev,
-      secure: !config.dev
+      secure: !config.dev,
     });
     res.status(200).json(user);
   },
@@ -287,7 +295,7 @@ app.get(
 
     res.cookie('token', token, {
       httpOnly: !config.dev,
-      secure: !config.dev
+      secure: !config.dev,
     });
 
     res.status(200).json(user);
