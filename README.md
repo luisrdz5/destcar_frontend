@@ -1,7 +1,4 @@
 # Libro de identidad
-
-![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
-
 A continuación, se presentan las caracteristicas visuales de la app.
 
 # Paleta de colores
@@ -42,8 +39,6 @@ A continuación, se presentan las caracteristicas visuales de la app.
 ![Opciones-especiales](/images/app/Opciones-especiales.png)
 
 * [Diseño de app](/frontend/destcar.xd) - Archivo de Adobe XD
-
-
 
 
 
