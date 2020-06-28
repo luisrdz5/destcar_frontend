@@ -30,6 +30,7 @@
   "homepage": "https://github.com/luisrdz5/destcar#readme",
   "dependencies": {
     "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "@babel/polyfill": "^7.6.0",
     "@babel/register": "^7.6.2",
     "@hapi/boom": "^7.4.2",
@@ -73,7 +74,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
-    "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "audit": "0.0.6",
     "autoprefixer": "^9.8.4",
