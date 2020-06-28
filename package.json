@@ -4,7 +4,7 @@
   "description": "Creacion del proyecto DestCar en React",
   "scripts": {
     "build": "webpack-cli --config webpack.config.js --colors",
-    "start:prod": "node src/ssr-server/index.js",
+    "start": "node src/ssr-server/index.js",
     "start:dev": "nodemon src/ssr-server/index.js --exact babel-node",
     "test": "echo \"Error: no test specified\" && exit 0",
     "test:watch": "jest --watch",
