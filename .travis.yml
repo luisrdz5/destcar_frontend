@@ -19,6 +19,7 @@ deploy:
     skip-cleanup: true
     keep-history: true
     api_key: $HEROKU_TOKEN
+    run: "npm run start"
     app: destcar-frontend
     on:
         repo: luisrdz5/destcar_frontend
