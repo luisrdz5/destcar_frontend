@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-//const domain = 'http://www.destcar.com';
-//const domain = 'http://localhost:8000';
-
 export const setDestiny = (payload) => ({
   type: 'SET_DESTINY',
   payload,
