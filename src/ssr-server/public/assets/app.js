@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "9652b2e908a4279a883a";
+/******/ 	var hotCurrentHash = "dcc108d1cbae0ff01e54";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -963,9 +963,9 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
   return a;
 };
 
- //const domain = 'https://www.destcar.com';
+ //const domain = 'http://www.destcar.com';
+//const domain = 'http://localhost:8000';
 
-var domain = 'http://localhost:8000';
 var setDestiny = function setDestiny(payload) {
   return {
     type: 'SET_DESTINY',
@@ -1080,13 +1080,13 @@ var logoutUser = function logoutUser(payload) {
   };
 };
 var loginUserFacebook = function loginUserFacebook(redirectUrl) {
-  window.location.href = "".concat(domain, "/auth/facebook");
+  window.location.href = '/auth/facebook';
 };
 var loginUserTwitter = function loginUserTwitter(redirectUrl) {
-  window.location.href = "".concat(domain, "/auth/twitter");
+  window.location.href = '/auth/twitter';
 };
 var loginUserGoogle = function loginUserGoogle(redirectUrl) {
-  window.location.href = "".concat(domain, "/auth/google");
+  window.location.href = '/auth/google';
 };
 var getQuote = function getQuote(payload) {
   return function (dispatch) {
@@ -1114,7 +1114,6 @@ var changeInput = function changeInput(payload) {
     return;
   }
 
-  reactHotLoader.register(domain, "domain", "/platzimaster/destcar/destcar_frontend/src/frontend/actions/index.js");
   reactHotLoader.register(setDestiny, "setDestiny", "/platzimaster/destcar/destcar_frontend/src/frontend/actions/index.js");
   reactHotLoader.register(setOrigin, "setOrigin", "/platzimaster/destcar/destcar_frontend/src/frontend/actions/index.js");
   reactHotLoader.register(loginRequest, "loginRequest", "/platzimaster/destcar/destcar_frontend/src/frontend/actions/index.js");

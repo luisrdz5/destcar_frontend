@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const domain = 'http://www.destcar.com';
+//const domain = 'http://www.destcar.com';
 //const domain = 'http://localhost:8000';
 
 export const setDestiny = (payload) => ({
@@ -98,13 +98,13 @@ export const logoutUser = (payload) => {
   };
 };
 export const loginUserFacebook = (redirectUrl) => {
-  window.location.href = `${domain}/auth/facebook`;
+  window.location.href = '/auth/facebook';
 };
 export const loginUserTwitter = (redirectUrl) => {
-  window.location.href = `${domain}/auth/twitter`;
+  window.location.href = '/auth/twitter';
 };
 export const loginUserGoogle = (redirectUrl) => {
-  window.location.href = `${domain}/auth/google`;
+  window.location.href = '/auth/google';
 };
 export const getQuote = (payload) => {
   return (dispatch) => {
