@@ -1,53 +1,45 @@
-# Libro de identidad
-A continuación, se presentan las caracteristicas visuales de la app.
+# DestCar
+DestCar Proyecto para la escuela de javascript
 
-# Paleta de colores
-  1. Tonos de verde:
-     * #99E265
-     * #A3F06C
-     * #6FA349
-2. Tonos de azul:
-   * #82D9FF
-   * #05C4E6
-   * #416D80
-3. Fuente
-   * Fredoka One
-
-# Logo
-![Logo Destcar vertical](/images/logo/logo-vertical.png) 
-![Logo Destcar horizontal](/images/logo/logo-horizontal.png) 
-
-> Se usó canva para diseñar el Logo
-
-# Imagenes de la aplicación
-![Inicio](/images/app/Inicio.png) 
-![Ingresar](/images/app/Ingresar.png) 
-![Registro](/images/app/Registro.png) 
-![Home](/images/app/Home.png) 
-![Side-menu](/images/app/Side-menu.png) 
-![Perfil](/images/app/Perfil.png) 
-![Lugares](/images/app/Lugares.png)  
-![Resultados-de-busqueda](/images/app/Resultados-de-busqueda.png) 
-![Detalles-de-lugar](/images/app/Detalles-de-lugar.png) 
-![Lugar-encontrado](/images/app/Lugar-encontrado.png)  
-![Iniciar-viaje](/images/app/Iniciar-viaje.png) 
-![Llamar-taxi](/images/app/Llamar-taxi.png) 
-![Esperando-taxi](/images/app/Esperando-taxi.png) 
-![Cancelar-viaje](/images/app/Cancelar-viaje.png) 
-![En-camino](/images/app/En-camino.png) 
-![Finalizar-viaje](/images/app/Finalizar-viaje.png) 
-![Opciones-especiales](/images/app/Opciones-especiales.png)
-
-* [Diseño de app](/frontend/destcar.xd) - Archivo de Adobe XD
+## Desarrollo Backend
 
 
+## Arquitectura de la Aplicación 
+
+La arquitectura de Backend Estara compuesta de los siguientes endpoints:
+
+- createUser .- Este endpoint se utilizara para crear usuario
+- getUser .- Este endpoint se utilizara para obtener el usuario 
+- getDrivers .- Este endpoint se utilizara para obtener los conductores cercanos al usuario
+- getDriver .- Este endpoint se utilizara para obtener al conductor
+- getTrip .- Este endpoint se utilizara para obtener el viaje/ruta que esta solicitando un usuario
+- getquotes .- Este endpoint se utilizara para cotizar un viaje 
+- createTrip .- Este endpoint se utilizara para crear un viaje por parte del usuario (esto realizara un cobro)
+- sendPayment .- Este endpoint se utilizara para enviar la forma de pago por parte del usuario
+#### Endpoints Opcionales
+- sendMessage .- Este endpoint se utilizara para enviar mensajes entre el conductor - usuario
+- getNearPlaces .- Este endpoint se utilizara para obtener sitios cercanos de interes.
+
+
+
+## Instalación
+
+`npm install`
+
+## Ejecución
+
+`npm run start`
+
+## Compilar
+
+`npm run build`
 
 ## Desarrolladores
-* [Luis Antonio Rodríguez García](https://github.com/luisrdz5)
+* Luis Antonio Rodríguez García 
 
 ### Contribuir
 Si alguien quiere agregar o mejorar algo, lo invito a colaborar directamente en este repositorio: 
-[destcar](https://github.com/luisrdz5/destcar/)
+[destcar](https://github.com/luisrdz5/destcar_frontend/)
 
 ### Licencia
 DestCar se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
